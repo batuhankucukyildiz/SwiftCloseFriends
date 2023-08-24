@@ -10,7 +10,7 @@ struct ContentView: View {
     @ObservedObject var viewModel = UsersViewModel()
     @State var isLoading = true
     @State private var isRefreshing = false  // Ekledik
-
+    //MARK: 
     var body: some View {
         if viewModel.users.isEmpty && isLoading {
             ScrollView {
