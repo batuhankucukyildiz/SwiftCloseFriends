@@ -18,6 +18,8 @@
 		459366DD2A97D6F800A3363D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459366DC2A97D6F800A3363D /* NetworkManager.swift */; };
 		459366E32A97D81E00A3363D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459366E22A97D81E00A3363D /* Users.swift */; };
 		459366E52A97D91200A3363D /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459366E42A97D91200A3363D /* UsersViewModel.swift */; };
+		459366E82A97DE5E00A3363D /* ContentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459366E72A97DE5E00A3363D /* ContentLoader.swift */; };
+		459366EA2A97DEA500A3363D /* ShimmerEffectBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459366E92A97DEA500A3363D /* ShimmerEffectBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		459366DC2A97D6F800A3363D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		459366E22A97D81E00A3363D /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		459366E42A97D91200A3363D /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		459366E72A97DE5E00A3363D /* ContentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoader.swift; sourceTree = "<group>"; };
+		459366E92A97DEA500A3363D /* ShimmerEffectBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffectBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +179,8 @@
 		459366E62A97DDB400A3363D /* ShimmerEffect */ = {
 			isa = PBXGroup;
 			children = (
+				459366E72A97DE5E00A3363D /* ContentLoader.swift */,
+				459366E92A97DEA500A3363D /* ShimmerEffectBox.swift */,
 			);
 			path = ShimmerEffect;
 			sourceTree = "<group>";
@@ -312,6 +318,8 @@
 				459366DD2A97D6F800A3363D /* NetworkManager.swift in Sources */,
 				459366E52A97D91200A3363D /* UsersViewModel.swift in Sources */,
 				459366B22A97D5B300A3363D /* ContentView.swift in Sources */,
+				459366E82A97DE5E00A3363D /* ContentLoader.swift in Sources */,
+				459366EA2A97DEA500A3363D /* ShimmerEffectBox.swift in Sources */,
 				459366E32A97D81E00A3363D /* Users.swift in Sources */,
 				459366DB2A97D6E800A3363D /* Endpoint.swift in Sources */,
 				459366B02A97D5B300A3363D /* CloseFriendsApp.swift in Sources */,
