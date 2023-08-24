@@ -12,7 +12,7 @@ class UsersViewModel :ObservableObject {
     
     @Published var users : [Users] = []
     init(){
-        getUsers()
+        //getUsers()
     }
     func getUsers() {
         NetworkManager.shared.getUsers{ result in

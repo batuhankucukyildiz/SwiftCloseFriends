@@ -9,6 +9,8 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var viewModel = UsersViewModel()
     @State var isLoading = true
+    @State private var isRefreshing = false  // Ekledik
+
     var body: some View {
         if viewModel.users.isEmpty && isLoading {
             ScrollView {
@@ -17,6 +19,7 @@ struct ContentView: View {
                         ContentLoader()
                     }
                 }
+                .frame(maxWidth: .infinity)  // Tam genişlikte görüntüle
             }
             .onAppear {
                 // Simulate loading users
@@ -24,12 +27,21 @@ struct ContentView: View {
                     isLoading = false
                 }
             }
+            .refreshable {
+                // Pull-to-refresh işlevi
+                 viewModel.getUsers()
+            }
         } else {
-            ScrollView{
-                    ForEach(viewModel.users){user in
-                        UserCard(user: user)
-                    }.padding(.horizontal)
-                   
+            ScrollView {
+                ForEach(viewModel.users) { user in
+                    UserCard(user: user)
+                }
+                .padding(.horizontal)
+            }
+            .refreshable {
+                // Pull-to-refresh işlevi
+                 viewModel.getUsers()
+
             }
         }
     }
