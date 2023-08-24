@@ -15,39 +15,39 @@ struct UserCard: View {
     var body: some View {
         VStack{
             ZStack{
-                Image("header").resizable()
+                Image("header")
+                    .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(height: 120)
+                    .frame(height: 80)  // Resim yüksekliğini düşür
                     .clipped()
                 
-                Image("Photo").resizable()
-                    .aspectRatio(contentMode: .fit)
+                Image("Photo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
                     .clipShape(Circle())
-                    .frame(width: 120 , height: 120)
+                    .frame(width: 80, height: 80)  // Resmi ve çerçeveyi küçült
                     .clipped()
-                    .offset(y: 40)
-                    .frame(maxWidth: .infinity , alignment : .leading)
+                    .offset(y: 20)  // Resmi biraz daha yukarı kaydır
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
-                
-            }.overlay(alignment : .topTrailing){
+            }
+            .overlay(alignment: .topTrailing){
                 Button{
-                
-                }label: {
+                    // Buton işlevi
+                } label: {
                     Image(systemName: "xmark.circle.fill")
                         .foregroundColor(.white)
                         .padding(6)
-                        .frame(width: 60 , height: 60)
-                        
-                    
+                        .frame(width: 40, height: 40)  // Buton boyutunu düşür
                 }
             }
             VStack{
                 Button {
-                    
+                    // Buton işlevi
                 } label: {
                     Text("Takip Et")
                         .foregroundColor(.white)
-                        .padding(.vertical , 4)
+                        .padding(.vertical, 2)  // Buton iç boşluğunu düşür
                         .padding(.horizontal)
                         .overlay{
                             Capsule()
@@ -55,26 +55,27 @@ struct UserCard: View {
                                 .foregroundColor(.white)
                         }
                 }
-                .frame(maxWidth: .infinity , alignment: .trailing)
+                .frame(maxWidth: .infinity, alignment: .trailing)
                 .padding()
                 HStack{
                     Text(user.name)
                         .fontWeight(.bold)
-                        .padding(.bottom ,20)
+                        .foregroundColor(.white)
+                        .padding(.bottom)
                     
                     Text(user.username)
                         .foregroundColor(.secondary)
-                        .padding(.bottom ,20)
+                        .padding(.bottom)
                 }
-                .frame(maxWidth: .infinity , alignment: .leading)
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.leading)
-                
-
             }
         }
         .background(Color(.gray))
-        .cornerRadius(20)
+        .cornerRadius(15)  // Kart köşelerinin yuvarlatılmasını artır
+        .padding()  // Kartın dış boşluğunu azalt
     }
+
 }
 /*
 struct User_Previews: PreviewProvider {

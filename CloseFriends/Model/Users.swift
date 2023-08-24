@@ -14,4 +14,5 @@ struct Users : Decodable , Identifiable {
     var name : String
     var username : String
     var email : String
+
 }
