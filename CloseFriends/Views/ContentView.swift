@@ -7,11 +7,10 @@
 
 import SwiftUI
 struct ContentView: View {
-    @ObservedObject var users = UsersViewModel()
+    @ObservedObject var viewModel = UsersViewModel()
     @State var isLoading = true
-    
     var body: some View {
-        if users.users.isEmpty && isLoading {
+        if viewModel.users.isEmpty && isLoading {
             ScrollView {
                 LazyVStack(spacing: 1) {
                     ForEach(0..<5) { _ in
@@ -21,20 +20,16 @@ struct ContentView: View {
             }
             .onAppear {
                 // Simulate loading users
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     isLoading = false
                 }
             }
         } else {
-            List(users.users) { user in
-                VStack(alignment: .leading) {
-                    Text(user.name)
-                        .font(.headline)
-                    Text(user.username)
-                        .font(.subheadline)
-                    Text(user.email)
-                        .font(.subheadline)
-                }
+            ScrollView{
+                    ForEach(viewModel.users){user in
+                        UserCard(user: user)
+                    }.padding(.horizontal)
+                   
             }
         }
     }
