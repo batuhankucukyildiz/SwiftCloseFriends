@@ -8,7 +8,8 @@
 import Foundation
 
 
-struct Users : Decodable {
+//MARK: Uniq Id :Identifiable
+struct Users : Decodable , Identifiable {
     var id : Int
     var name : String
     var username : String

@@ -42,11 +42,11 @@ class NetworkManager {
         }
         urlSessionTask.resume()
     }
-    /*
-    func getAllExchangeData(completion : @escaping(Result<ExchangeModel , Error>) ->Void) -> Void {
-        let endpoint = EndPoint.getExchangeDetails
+    
+    func getUsers(completion : @escaping(Result<[Users] , Error>) ->Void) -> Void {
+        let endpoint = EndPoint.users
         request(endpoint, completion: completion)
     }
-     */
+     
 }
 

@@ -17,6 +17,7 @@
 		459366DB2A97D6E800A3363D /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459366DA2A97D6E800A3363D /* Endpoint.swift */; };
 		459366DD2A97D6F800A3363D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459366DC2A97D6F800A3363D /* NetworkManager.swift */; };
 		459366E32A97D81E00A3363D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459366E22A97D81E00A3363D /* Users.swift */; };
+		459366E52A97D91200A3363D /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459366E42A97D91200A3363D /* UsersViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		459366DA2A97D6E800A3363D /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		459366DC2A97D6F800A3363D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		459366E22A97D81E00A3363D /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		459366E42A97D91200A3363D /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,12 @@
 		459366AE2A97D5B300A3363D /* CloseFriends */ = {
 			isa = PBXGroup;
 			children = (
+				459366E62A97DDB400A3363D /* ShimmerEffect */,
 				459366E12A97D74400A3363D /* Model */,
 				459366E02A97D73A00A3363D /* ViewModel */,
 				459366DF2A97D73200A3363D /* Views */,
 				459366D92A97D6D700A3363D /* Service */,
 				459366AF2A97D5B300A3363D /* CloseFriendsApp.swift */,
-				459366B12A97D5B300A3363D /* ContentView.swift */,
 				459366B32A97D5B400A3363D /* Assets.xcassets */,
 				459366B52A97D5B400A3363D /* Preview Content */,
 			);
@@ -149,6 +151,7 @@
 		459366DF2A97D73200A3363D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				459366B12A97D5B300A3363D /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 		459366E02A97D73A00A3363D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				459366E42A97D91200A3363D /* UsersViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -166,6 +170,13 @@
 				459366E22A97D81E00A3363D /* Users.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		459366E62A97DDB400A3363D /* ShimmerEffect */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShimmerEffect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				459366DD2A97D6F800A3363D /* NetworkManager.swift in Sources */,
+				459366E52A97D91200A3363D /* UsersViewModel.swift in Sources */,
 				459366B22A97D5B300A3363D /* ContentView.swift in Sources */,
 				459366E32A97D81E00A3363D /* Users.swift in Sources */,
 				459366DB2A97D6E800A3363D /* Endpoint.swift in Sources */,
